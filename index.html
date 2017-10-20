@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Bowling Simulator</title>
+		
+	 <!--Custom Styles -->
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  
+	  
+	</head>
+
+
+
+	<body>
+
+	
+		<h1 class="text-center">Bowling Sim</h1>
+
+		<br><br>
+		<h3 class="text-center">Player1</h3>
+
+		<div id='scorecard'>
+		  <table id='scorecardTable' class='scorecard' cellpadding='1' cellspacing='0'>
+			<tr>
+			  <th colspan='6'>Frame 1</th>
+			  <th colspan='6'>Frame 2</th>
+			  <th colspan='6'>Frame 3</th>
+			  <th colspan='6'>Frame 4</th>
+			  <th colspan='6'>Frame 5</th>
+			  <th colspan='6'>Frame 6</th>
+			  <th colspan='6'>Frame 7</th>
+			  <th colspan='6'>Frame 8</th>
+			  <th colspan='6'>Frame 9</th>
+			  <th colspan='6'>Frame 10</th>
+			</tr>
+			<tr>
+			  <td colspan='3'></td><td id="frame1" class="clear"colspan='3'></td>
+			  <td colspan='3'></td><td id="frame2" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame3" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame4" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame5" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame6" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame7" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame8" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame9" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="frame10" class="clear" colspan='3'></td>
+			</tr>
+			<tr>
+			  <td colspan='6' class="clear"id="marker0"></td>
+			  <td colspan='6' class="clear"id="marker1"></td>
+			  <td colspan='6' class="clear"id="marker2"></td>
+			  <td colspan='6' class="clear"id="marker3"></td>
+			  <td colspan='6' class="clear"id="marker4"></td>
+			  <td colspan='6' class="clear"id="marker5"></td>
+			  <td colspan='6' class="clear"id="marker6"></td>
+			  <td colspan='6' class="clear"id="marker7"></td>
+			  <td colspan='6' class="clear"id="marker8"></td>
+			  <td colspan='6' class="clear"id="marker9"></td>
+			</tr>
+		  </table>
+
+
+		<h3 class="text-center">Player 2</h3>
+
+		  <table id='scorecardTable' class='scorecard' cellpadding='1' cellspacing='0'>
+			<tr>
+			  <th colspan='6'>Frame 1</th>
+			  <th colspan='6'>Frame 2</th>
+			  <th colspan='6'>Frame 3</th>
+			  <th colspan='6'>Frame 4</th>
+			  <th colspan='6'>Frame 5</th>
+			  <th colspan='6'>Frame 6</th>
+			  <th colspan='6'>Frame 7</th>
+			  <th colspan='6'>Frame 8</th>
+			  <th colspan='6'>Frame 9</th>
+			  <th colspan='6'>Frame 10</th>
+			</tr>
+			<tr>
+			  <!--this is where the score goes for each roll -->
+			  <td colspan='3'></td><td id="2frame1" class="clear"colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame2"class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame3"class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame4"class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame5" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame6"class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame7" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame8" class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame9"class="clear" colspan='3'></td>
+			  <td colspan='3'></td><td id="2frame10"class="clear" colspan='3'></td>
+			</tr>
+			<tr>
+			  <!--player twos total round score -->
+			  <td colspan='6'class="clear"id="2marker0"></td>
+			  <td colspan='6'class="clear"id="2marker1"></td>
+			  <td colspan='6'class="clear"id="2marker2"></td>
+			  <td colspan='6'class="clear"id="2marker3"></td>
+			  <td colspan='6'class="clear"id="2marker4"></td>
+			  <td colspan='6'class="clear"id="2marker5"></td>
+			  <td colspan='6'class="clear"id="2marker6"></td>
+			  <td colspan='6'class="clear"id="2marker7"></td>
+			  <td colspan='6'class="clear"id="2marker8"></td>
+			  <td colspan='6'class="clear"id="2marker9"></td>
+			</tr>
+		  </table>
+
+		</div> <!--End of scorecard ID -->
+
+
+  
+    
+ 
+		  <!-- Append the winner with their total score  -->
+
+		<div class="text-center">
+		<button class="but blue btn btn-primary" id="black">Roll the ball!</button>
+		</div>
+
+		<h1 id="yourscore" class="winner-score"></h1>
+
+
+
+
+ 
+	
+		
+		
+		
+	
+	
+		
+		  	<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+ 
+      
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	  <!--link the external js file -->
+	  <script src="js/script.js"></script>
+	
+	</body>
+
+
+
+
+
+
+
+</html>
